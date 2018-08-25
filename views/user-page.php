@@ -156,11 +156,21 @@
       <div class="work-info-agileits">
         <div class="col-md-4 work-left-agileits-w3layouts">
           <?php
-          // $date = $experience["start"];
-          // $convert = strtotime($date);
-          // echo $convert;
+          $sdate = $experience["start"];
+          $edate = $experience["end"];
+          $psdate = DateTime::createFromFormat('d/m/Y', $sdate);
+          $pedate = DateTime::createFromFormat('d/m/Y', $edate);
+          $csdate = $psdate->format('Y');
+            $cedate = $pedate->format('Y');
           ?>
-          <h6><i class="fa fa-calendar-check-o" aria-hidden="true"></i> <?php echo $experience["start"] ." - ". $experience["end"];?></h6>
+          <h6><i class="fa fa-calendar-check-o" aria-hidden="true"></i><?php echo $csdate ." - ";?>
+            <?
+          if($cedate == date("Y")){
+            echo "Till Date";
+          } else {
+            echo $cedate;
+          }
+          ?></h6>
         </div>
         <div class="col-md-8 work-right-w3-agileits">
           <h3><? echo $experience["company"]; ?><span> / <? echo $experience["jobrole"]; ?></span></h3>
@@ -171,9 +181,17 @@
     <?php } ?>
     <h5 class="work2">Education</h5>
     <?php foreach ($this->education_details as $detail) { ?>
+    <?php
+      $sdate = $detail["start"];
+      $edate = $detail["end"];
+      $psdate = DateTime::createFromFormat('d/m/Y', $sdate);
+      $pedate = DateTime::createFromFormat('d/m/Y', $edate);
+      $csdate = $psdate->format('Y');
+        $cedate = $pedate->format('Y');
+      ?>
       <div class="work-info-agileits">
         <div class="col-md-4 work-left-agileits-w3layouts">
-          <h6><i class="fa fa-calendar-check-o" aria-hidden="true"></i> <? echo $detail["start"] ." - ". $detail["end"];?></h6>
+          <h6><i class="fa fa-calendar-check-o" aria-hidden="true"></i> <? echo $csdate ." - ". $cedate;?></h6>
         </div>
         <div class="col-md-8 work-right-w3-agileits">
           <h3 style="text-transform: uppercase;"><? echo $detail["institution"];?></h3>
