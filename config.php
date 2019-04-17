@@ -2,9 +2,9 @@
 
 // Always provide a TRAILING SLASH (/) AFTER A PATH
 
-define('URL', 'http://localhost/personal/');
-define('ADMIN_ASSETS', 'http://localhost/personal/assets/admin/');
-define('USER_ASSETS', 'http://localhost/personal/assets/users/');
+define('URL', 'http://ayo-portfolio.cleverapps.io/');
+define('ADMIN_ASSETS', 'http://ayo-portfolio.cleverapps.io/assets/admin/');
+define('USER_ASSETS', 'http://ayo-portfolio.cleverapps.io/assets/users/');
 
 define('LIBS', 'libs/');
 define('UPLOADS', 'uploads/');
