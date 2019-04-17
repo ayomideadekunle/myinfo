@@ -10,7 +10,7 @@ define('LIBS', 'libs/');
 define('UPLOADS', 'uploads/');
 
 define('DB_TYPE', 'mysql');
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'personal');
-define('DB_USER', 'root');
-define('DB_PASS', 'ayomidekunle');
+define('DB_HOST', 'bnkupvy7t1e3gkpnynrx-mysql.services.clever-cloud.com');
+define('DB_NAME', 'bnkupvy7t1e3gkpnynrx');
+define('DB_USER', 'uefcj2vwh2c7vavz');
+define('DB_PASS', '6OdNg03nC98B6sqcBgur');
